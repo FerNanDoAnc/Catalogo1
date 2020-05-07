@@ -1,0 +1,82 @@
+!!!5
+%html{class:"no-js", lang:"es"} 
+    %head
+        %meta{charset:"utf-8"}
+        %title Tienda 
+        %meta{name:"description", content:"Los mejores productos al mejor precio"}
+        %link{href:"https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap", rel:"stylesheet"}
+        %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Acme&display=swap"}
+        
+        %link{rel:"stylesheet", href:"css/normalize.css"}
+        %link{rel:"stylesheet", href:"css/bootstrap.css"}
+        //%link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"} 
+        %link{rel:"stylesheet", href:"css/flexboxgrid.min.css"}  
+        %link{rel:"stylesheet", href:"css/style.css"}
+        %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        %script{src:"js/vendor/modernizr-3.10.0.min.js"}
+    %body
+        ="<!--[if lt IE 9]>"
+        %p{class:"browseupgrade"}
+            Estas usando un navegador 
+            %strong desactualizado. 
+            Por favor 
+            %a{href:"http://browsehappy.com"}
+            actualiza tu navegador para una mejor experiencia
+        ="<![endif]-->"
+        .video-container
+            %video{autoplay:true, loop:true,muted:true, width:"1280",height:"720", poster:"/images/pizza.jpg" }
+                %source{src:"videos/mp4/pizza.mp4", typ:"video/mp4,"}
+                %source{src:"videos/webm/portada.webm", typ:"video/webm"}
+        .row.full-height.middle-xs.center-xs.relative.up#home
+            .col-xs-12
+                .box.white-text
+                    %img{src:"/images/logo.png", width:"160"}
+                    %h1.lato-script.title.no-margin Catalogo Online
+                    %p#is-open.acme-script.titulo-2 
+                        %i.glyphicon.glyphicon-time
+                        Abierto ahora
+            %nav.fixed.top.right.navigation.white-text#navigation
+                -menu=["Inicio","Menu","Galeria","Contacto","Como llegar"]
+                %ul.list-inline
+                    -menu.each do |item|
+                        %li
+                            %a{}= item
+            .absolute.black.large-padding.white-text.full-width#description
+                .row.middle-xs.center-xs  
+                    .col-xs-7.col-sm-6.white-text.medium
+                        Atencion al publico
+                    .col-xs.hidden#sticky-navigation
+                        .box
+                            .nav.text-right.navigation
+                                %ul.list-inline
+                                    -menu.each do |item|
+                                        %li
+                                            %a{}= item
+        .text-center.relative#menu
+            .absolute.white#menu-title
+            %h2.lato-script.title 
+                Menú
+            -menu_photos = [{name:"comida1", pricing:"15.00", image:"food1"},
+                            {name:"comida2", pricing:"15.00", image:"food2"},
+                            {name:"comida3", pricing:"15.00", image:"food3"},
+                            {name:"comida4", pricing:"15.00", image:"food1"},
+                            {name:"comida5", pricing:"15.00", image:"food2"},
+                            {name:"comida6", pricing:"15.00", image:"food3"},
+                            {name:"comida7", pricing:"15.00", image:"food1"},
+                            {name:"comida8", pricing:"15.00", image:"food2"},]
+            .row
+                -menu_photos.each do |photo|
+                    .col-md-3.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(/images/food/#{photo[:image]}.jpg)"}
+                        .screen 
+                            .row.middle-xs.full-height
+                                .col-xs-12.white-text
+                                    .h3.lato-script.subtitle=photo[:name]
+                                    
+                                    %p.no-margin="S/. "+photo[:pricing]
+        %script{src:"http://code.jquery.com/jquery-3.5.0.min.js",
+                integrity:"sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=",
+                crossorigin:"anonymous"}
+        %script 
+            window.jQuery || document.write("<script src='/js/vendor/jquery-3.5.0.min.js'<\/script>")            
+        %script{src:"/js/main.js"} 
+               
