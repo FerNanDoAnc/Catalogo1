@@ -200,9 +200,63 @@ textarea {
   transition: top 0.5s;
 }
 
+#menu-title {
+  width: 280px;
+  z-index: 5;
+  top: 50;
+  left: calc(50% - 140px);
+  top: calc(50% - 3.3em);
+}
+
+#gallery {
+  width: 100%;
+  overflow-x: hidden;
+}
+#gallery .inner {
+  white-space: nowrap;
+  position: relative;
+  left: 0%;
+  transition: left 1.5s;
+}
+#gallery .image {
+  display: inline-block;
+  margin-right: -4px;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .card {
+  margin-top: -200px;
+  padding: 2em;
+}
+
+#contact {
+  margin-top: -200px;
+}
+#contact .MyContact {
+  height: 50px;
+}
+
+input, textarea {
+  font-size: 1.8em;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  border-bottom: solid 1px #eee;
+  background-color: transparent;
+  width: 100%;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+.card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 .medium, .navigation li {
   font-size: 1.7em;
 }
@@ -223,6 +277,10 @@ textarea {
   bottom: 0px;
 }
 
+.black-text {
+  color: black;
+}
+
 .white-text {
   color: white;
 }
@@ -241,6 +299,10 @@ textarea {
 
 .acme-script, .navigation li {
   font-family: "Acme", sans-serif;
+}
+
+.slim {
+  font-weight: 200;
 }
 
 .title {
@@ -282,6 +344,10 @@ textarea {
 
 .row {
   margin: 0;
+}
+
+.top-space {
+  margin-top: 2em;
 }
 
 .no-margin {

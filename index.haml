@@ -1,8 +1,9 @@
+-gallery_images = ["fooda.jpg","foodb.jpg","foodc.jpg","foodd.jpg","foode.jpg","foodc.jpg","foodc.jpg"]
 !!!5
 %html{class:"no-js", lang:"es"} 
     %head
         %meta{charset:"utf-8"}
-        %title Tienda 
+        %title Catalogo 
         %meta{name:"description", content:"Los mejores productos al mejor precio"}
         %link{href:"https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap", rel:"stylesheet"}
         %link{rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Acme&display=swap"}
@@ -13,6 +14,7 @@
         %link{rel:"stylesheet", href:"css/flexboxgrid.min.css"}  
         %link{rel:"stylesheet", href:"css/style.css"}
         %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        %meta{:"data-name"=>"image-counter", content:"#{gallery_images.size - 1}"}
         %script{src:"js/vendor/modernizr-3.10.0.min.js"}
     %body
         ="<!--[if lt IE 9]>"
@@ -54,8 +56,9 @@
                                             %a{}= item
         .text-center.relative#menu
             .absolute.white#menu-title
-            %h2.lato-script.title 
-                Menú
+                %h2.lato-script.title 
+                    Menú
+                    //Trarer las fotos del menu
             -menu_photos = [{name:"comida1", pricing:"15.00", image:"food1"},
                             {name:"comida2", pricing:"15.00", image:"food2"},
                             {name:"comida3", pricing:"15.00", image:"food3"},
@@ -73,6 +76,42 @@
                                     .h3.lato-script.subtitle=photo[:name]
                                     
                                     %p.no-margin="S/. "+photo[:pricing]
+        #gallery
+            .inner
+                -gallery_images.each do |image|
+                    .image{style:"background-image:url(/images/food/#{image})"}
+            //Con Css -- %div{style:"width:80%;height:200px;background-color:red;margin:0 auto;"}
+            //Con Bostrap
+        .container
+            .card.white.black-text.text-center.relative
+                %h3.medium.slim
+                    En 
+                    %strong.lato-script.medium Nombre del restaurante
+                    encuentras los 
+                    %strong.lato-script.medium 
+                        mejores
+                    %p.top-space
+                        Mensaje de restaurant ... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, quod unde natus, ut reiciendis quasi quis,
+                        quibusdam dolore recusandae nam aut fugiat at impedit! Laborum, dignissimos totam? Debitis, quo animi!
+                        %strong.lato-script.medium Nombre del chef
+        
+        .black.white-text.full-height#contact
+            .row.middle-xs.full-height
+                .col-xs-12
+                    .box
+                        %form{action:"",method:"POST"}
+                            .row.center-xs
+                                .col-xs-2.col-md-1
+                                    .box
+                                        
+                                .col-xs-5
+                                    .box.MyContact   
+                                        %input{type:"email",name:"email",placeholder:" Escribe tu correo electronico"}
+                                        %input{type:"texto",name:"name",placeholder:" Escribe tu nombre"}
+                                        %textarea{name:"body",placeholder:" Escribenos tu mensaje"}
+
+
+        //Anhadir el query
         %script{src:"http://code.jquery.com/jquery-3.5.0.min.js",
                 integrity:"sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=",
                 crossorigin:"anonymous"}

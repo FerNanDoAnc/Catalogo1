@@ -2,7 +2,7 @@
 <html class="no-js" lang="es">
 <head>
 <meta charset="utf-8">
-<title>Tienda</title>
+<title>Catalogo</title>
 <meta content="Los mejores productos al mejor precio" name="description">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Acme&amp;display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
 <link href="css/flexboxgrid.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="6" data-name="image-counter">
 <script src="js/vendor/modernizr-3.10.0.min.js"></script>
 </head>
 <body>
@@ -92,10 +93,12 @@ Atencion al publico
 </div>
 </div>
 <div class="text-center relative" id="menu">
-<div class="absolute white" id="menu-title"></div>
+<div class="absolute white" id="menu-title">
 <h2 class="lato-script title">
 Menú
+<!-- /Trarer las fotos del menu -->
 </h2>
+</div>
 <div class="row">
 <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 food" style="background-image:url(/images/food/food1.jpg)">
 <div class="screen">
@@ -179,6 +182,59 @@ Menú
 </div>
 </div>
 </div>
+<div id="gallery">
+<div class="inner">
+<div class="image" style="background-image:url(/images/food/fooda.jpg)"></div>
+<div class="image" style="background-image:url(/images/food/foodb.jpg)"></div>
+<div class="image" style="background-image:url(/images/food/foodc.jpg)"></div>
+<div class="image" style="background-image:url(/images/food/foodd.jpg)"></div>
+<div class="image" style="background-image:url(/images/food/foode.jpg)"></div>
+<div class="image" style="background-image:url(/images/food/foodc.jpg)"></div>
+<div class="image" style="background-image:url(/images/food/foodc.jpg)"></div>
+</div>
+<!-- /Con Css -- %div{style:"width:80%;height:200px;background-color:red;margin:0 auto;"} -->
+<!-- /Con Bostrap -->
+</div>
+<div class="container">
+<div class="card white black-text text-center relative">
+<h3 class="medium slim">
+En
+<strong class="lato-script medium">Nombre del restaurante</strong>
+encuentras los
+<strong class="lato-script medium">
+mejores
+</strong>
+<p class="top-space">
+Mensaje de restaurant ... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, quod unde natus, ut reiciendis quasi quis,
+quibusdam dolore recusandae nam aut fugiat at impedit! Laborum, dignissimos totam? Debitis, quo animi!
+<strong class="lato-script medium">Nombre del chef</strong>
+</p>
+</h3>
+</div>
+</div>
+<div class="black white-text full-height" id="contact">
+<div class="row middle-xs full-height">
+<div class="col-xs-12">
+<div class="box">
+<form action="" method="POST">
+<div class="row center-xs">
+<div class="col-xs-2 col-md-1">
+<div class="box"></div>
+</div>
+<div class="col-xs-5">
+<div class="box MyContact">
+<input name="email" placeholder=" Escribe tu correo electronico" type="email">
+<input name="name" placeholder=" Escribe tu nombre" type="texto">
+<textarea name="body" placeholder=" Escribenos tu mensaje"></textarea>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- /Anhadir el query -->
 <script crossorigin="anonymous" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" src="http://code.jquery.com/jquery-3.5.0.min.js"></script>
 <script>
 window.jQuery || document.write("<script src='/js/vendor/jquery-3.5.0.min.js'<\/script>")

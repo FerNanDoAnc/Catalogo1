@@ -1,9 +1,29 @@
 ;(function(){
+    //variables
     let sticky=false
+    let currentPosition = 0
+
+    const imageCounter = $("[data-name='image-counter'").attr("content")
 
     $("#sticky-navigation").removeClass("hidden")
     $("#sticky-navigation").slideUp(0)
     console.log($(window).height());
+
+    //Intervalos para las imagees fooda,b...
+    setInterval(()=>{
+        if(currentPosition<imageCounter){
+            currentPosition++
+        }else{
+            currentPosition=0
+        }
+        
+        
+        $("#gallery .inner").css({
+            left:"-"+currentPosition*100+"%"
+        })
+        
+    },4000)
+
     //$ es similar a escribir jQuery
     $(window).scroll(()=>{
         const inBottom=isInBottom()
