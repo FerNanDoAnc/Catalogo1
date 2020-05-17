@@ -113,11 +113,16 @@
                                             %button{type:"submit",class:"btn btn-warning"}
                                                 Enviar Mensaje
 
+        #location
+            #map
+
         //Anhadir el query
         %script{src:"http://code.jquery.com/jquery-3.5.0.min.js",
                 integrity:"sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=",
                 crossorigin:"anonymous"}
         %script 
             window.jQuery || document.write("<script src='/js/vendor/jquery-3.5.0.min.js'<\/script>")            
-        %script{src:"/js/main.js"} 
+        %script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyCtn-4SUq2Q0FUhZQ-r-xvBAhEEjGHpS5o&callback=initMap"}
+        %script{src:"/dist/maps.js"} 
+        %script{src:"/dist/main.js"} 
                
