@@ -99,7 +99,7 @@
             .row.middle-xs.full-height
                 .col-xs-12
                     .box
-                        %form{action:"",method:"POST"}
+                        %form{action:"https://formspree.io/fernando.ancajima99@gmail.com",method:"POST",id:"contact-form",class:"step-form"}
                             .row.center-xs
                                 .col-xs-2.col-md-1
                                     .box
@@ -109,7 +109,9 @@
                                         %input{type:"email",name:"email",placeholder:" Escribe tu correo electronico"}
                                         %input{type:"texto",name:"name",placeholder:" Escribe tu nombre"}
                                         %textarea{name:"body",placeholder:" Escribenos tu mensaje"}
-
+                                        %div
+                                            %button{type:"submit",class:"btn btn-warning"}
+                                                Enviar Mensaje
 
         //Anhadir el query
         %script{src:"http://code.jquery.com/jquery-3.5.0.min.js",
