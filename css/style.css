@@ -458,6 +458,11 @@ input, textarea {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
+@media only screen and (max-width: 500px) {
+  #responsive-nav ul {
+    top: 90px;
+  }
+}
 @media only screen and (max-width: 960px) {
   #menu-opener {
     display: block;
@@ -466,8 +471,8 @@ input, textarea {
   #responsive-nav ul {
     position: absolute;
     width: 100%;
-    font-size: 1.5em;
-    top: 95px;
+    font-size: 1em;
+    top: 75px;
     background-color: #222;
     left: 0px;
     text-align: center;
@@ -476,7 +481,7 @@ input, textarea {
     transition: all 0.4s;
   }
   #responsive-nav ul.active {
-    max-height: 80vh;
+    max-height: 90vh;
   }
   #responsive-nav ul li {
     display: block;

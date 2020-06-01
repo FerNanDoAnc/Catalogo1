@@ -9,6 +9,10 @@
     $("#sticky-navigation").slideUp(0)
     console.log($(window).height());
 
+    $("#menu-opener").on("click",function(){
+        $("#responsive-nav ul").toggleClass("active")
+    })
+
     //Intervalos para las imagees fooda,b...
     setInterval(()=>{
         if(currentPosition<imageCounter){
