@@ -240,16 +240,25 @@ Enviar Mensaje
 </div>
 </div>
 <div id="location">
-<div id="map"></div>
-<div class="black large-padding white-text text-center medium" id="message"></div>
+<div id="map">
+<div style="width: 100%">
+<iframe frameborder="0" height="600" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=es&amp;q=Lima-Peru+(Catalogo)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" width="100%">
+<a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/"></a>
+Radio del mapa
+</iframe>
+</div>
+<div class="black large-padding white-text text-center medium" id="message">
+<!-- /mensaje de google --min para llegar -->
+</div>
+</div>
 </div>
 <!-- /Anhadir el query -->
 <script crossorigin="anonymous" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" src="http://code.jquery.com/jquery-3.5.0.min.js"></script>
 <script>
 window.jQuery || document.write("<script src='/js/vendor/jquery-3.5.0.min.js'<\/script>")
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtn-4SUq2Q0FUhZQ-r-xvBAhEEjGHpS5o"></script>
-<script src="/dist/maps.js"></script>
+<!-- /%script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyCtn-4SUq2Q0FUhZQ-r-xvBAhEEjGHpS5o"} -->
+<!-- /%script{src:"/dist/maps.js"} -->
 <script src="/dist/main.js"></script>
 </body>
 </html>
