@@ -280,7 +280,9 @@
   #map{
     height: 500px;
   }
-
+  #menu-opener{
+    display: none;
+  }
   /* ==========================================================================
      Helper classes
      ========================================================================== */
@@ -455,6 +457,34 @@
     /* Style adjustments for viewports that meet the condition */
   }
   
+  @media only screen and (max-width: 960px){
+    //mobile first
+    #menu-opener{
+      display: block;
+    }
+    #responsive-nav{
+      ul{
+        position: absolute;
+        width: 100%;
+        font-size: 1.5em;
+        top: 95px;
+        background-color: #222;
+        left: 0px;
+        text-align: center;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.4s;
+        &.active{
+          max-height: 80vh;
+        }
+        li{
+          display: block;
+          margin-top: 1em;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
   @media print,
     (-webkit-min-device-pixel-ratio: 1.25),
     (min-resolution: 1.25dppx),
