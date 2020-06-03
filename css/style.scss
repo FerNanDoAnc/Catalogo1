@@ -456,14 +456,14 @@
   @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
   }
-  @media only screen and (max-width: 500px){
+  @media only screen and (max-width: 320px){
     #responsive-nav{
       ul{
         top: 90px;
       }
     }
   }
-  @media only screen and (max-width: 960px){
+  @media only screen and (max-width: 760px){
     //mobile first
     #menu-opener{
       display: block;
