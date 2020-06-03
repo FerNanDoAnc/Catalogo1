@@ -58,7 +58,7 @@
         //$next_input.focus() 
         
         //cordinar los circulos
-        const posicion = ($next_step.index(".step") *2 )+ 1
+        const posicion = ($next_step.index(".step"))+ 1
         //console.log(posicion)
         
         const $circle = $(".path-step:nth-child("+posicion+")").addClass("active")

@@ -8,9 +8,10 @@
     $("#sticky-navigation").removeClass("hidden")
     $("#sticky-navigation").slideUp(0)
     console.log($(window).height());
-
+    //click pqra quq aparezca el menu responsivo
     $("#menu-opener").on("click",function(){
         $("#responsive-nav ul").toggleClass("active")
+        $(this).toggleClass("glyphicon-menu-hamburger")
     })
 
     //Intervalos para las imagees fooda,b...
