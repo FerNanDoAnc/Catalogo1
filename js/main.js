@@ -14,6 +14,8 @@
         $(this).toggleClass("glyphicon-menu-hamburger")
     })
 
+    //$("menu-link").on("click",toggleNav)
+
     //Intervalos para las imagees fooda,b...
     setInterval(()=>{
         if(currentPosition<imageCounter){
