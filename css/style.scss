@@ -295,7 +295,7 @@
   #location{
     width: 80%;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: -50px;
   }
   #map{
     height: 500px;
@@ -476,12 +476,8 @@
   @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
   }
-  @media only screen and (max-width: 500px){
-    #responsive-nav{
-      ul{
-        top: 90px;
-      }
-    }
+  @media only screen and (max-height: 600px){
+    #contact, .container .card{margin-top: -15%;}
   }
   @media only screen and (max-width: 960px){
     //mobile first
@@ -512,6 +508,13 @@
           margin-top: 1em;
           padding: 10px 15px;
         }
+      }
+    }
+  }
+  @media only screen and (max-width: 500px){
+    #responsive-nav{
+      ul{
+        top: 95px;
       }
     }
   }

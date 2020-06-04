@@ -102,15 +102,16 @@
                     .box
                         %form{action:"https://formspree.io/fernando.ancajima99@gmail.com",method:"POST",id:"contact-form",class:"step-form"}
                             .row.center-xs
-                                .col-xs-12.col-sm-2.col-md-1.fisrt-sm
+                                .col-xs-2.col-md-1.text-center
                                     .box
                                         -3.times do |i|
                                             -if i==0
                                                 .path-step.active
                                             -else
                                                 .path-step
+                                            %br
                                         
-                                .col-xs-12.col-sm-3.first-xs
+                                .col-xs-5.col-sm-3.first-xs
                                     .box.MyContact   
                                         %input{type:"email",name:"email",placeholder:" Escribe tu correo electronico"}
                                         %input{type:"texto",name:"name",placeholder:" Escribe tu nombre"}
