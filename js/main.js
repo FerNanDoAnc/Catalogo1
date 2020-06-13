@@ -13,11 +13,9 @@
     $("#menu-opener").on("click", toggleNav)
     $(".menu-link").on("click", toggleNav)
 
+    checkScroll()
+    isOpen()
 
-    function toggleNav() {
-        $("#responsive-nav ul").toggleClass("active")
-        $("#menu-opener").toggleClass("glyphicon-menu-hamburger")
-    }
 
     //Intervalos para las imagees fooda,b...
     setInterval(() => {
@@ -35,7 +33,9 @@
     }, 4000)
 
     //$ es similar a escribir jQuery
-    $(window).scroll(() => {
+    $(window).scroll(checkScroll)
+
+    function checkScroll() {
         const inBottom = isInBottom()
         if (inBottom && !sticky) {
             //mostrar la navegacion sticky
@@ -47,7 +47,23 @@
             sticky = false
             unStickNavigation()
         }
-    })
+    }
+
+    function isOpen() {
+        //reloj de 24 horas
+        let date = new Date()
+        const current_hour = date.getHours()
+
+        if (current_hour < 11 || current_hour > 20) {
+            $("#is-open .text").html("Cerrado ahora <br> Abierto de 6:00 am a 8:00 pm")
+        }
+
+    }
+
+    function toggleNav() {
+        $("#responsive-nav ul").toggleClass("active")
+        $("#menu-opener").toggleClass("glyphicon-menu-hamburger")
+    }
 
     function stickNavigation() {
         $("#description").addClass("fixed").removeClass("absolute")
