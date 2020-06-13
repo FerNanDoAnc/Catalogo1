@@ -55,7 +55,7 @@
         const current_hour = date.getHours()
 
         if (current_hour < 11 || current_hour > 20) {
-            $("#is-open .text").html("Cerrado ahora <br> Abierto de 6:00 am a 8:00 pm")
+            $("#is-open .text").html("Cerrado ahora <br> Abierto de 11:00 am a 8:00 pm")
         }
 
     }
